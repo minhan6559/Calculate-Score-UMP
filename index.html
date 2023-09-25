@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Score in UMP VN</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/97f59db719.js" crossorigin="anonymous"></script>
+    <!-- add jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form id="form">
+        <input id="input-1" type="text" required />
+        <label for="input-1">
+            <span class="label-text">Enter the number of correct anwsers</span>
+            <span class="nav-dot"></span>
+            <div class="signup-button-trigger">Start Calculate</div>
+        </label>
+        <input id="input-2" type="text" required />
+        <label for="input-2">
+            <span class="label-text">Total number of questions</span>
+            <span class="nav-dot"></span>
+        </label>
+        <button type="submit">See the result</button>
+        <p class="tip">Press Tab</p>
+        <div class="signup-button">Start Calculate</div>
+    </form>
+    <div id="result" class="hide">
+        <h1>Your final score</h1>
+        <h2 id="score"></h2>
+    </div>
+</body>
+
+</html>
