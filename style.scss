@@ -86,7 +86,7 @@ input:focus + label .nav-dot:before {
 
 .tip {
   position: fixed;
-  top: 57%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
@@ -228,10 +228,17 @@ form {
   color: $background;
 }
 
-#score{
+#score, #grade, #gpa{
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.score-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .fa{
