@@ -12,15 +12,15 @@ const calculateScore = (x, y) => {
     let comment = '';
     switch (true) {
         case (n >= 0 && n <= 0.5):
-            score = 8 * x / y;
+            score = 8 * n;
             comment = 'I was expecting a battle, but this exam was more like a massacre.';
             break;
         case (n > 0.5 && n <= 0.6):
-            score = 4 + (10 * x - 5 * y) / y;
+            score = 10 * n - 1;
             comment = "It\"s not about how hard you hit the books, it\"s about how hard the books hit you.";
             break;
         case (n > 0.6 && n <= 1):
-            score = 5 + 12.5 * (x - 0.6 * y) / y;
+            score = 12.5  * n - 2.5;
             comment = 'With a heart as brave as yours, I am sure no test can take you down. Wish you all the luck for success.';
             break;
         default:
@@ -105,12 +105,12 @@ form.addEventListener('submit', (e) => {
 
     if(finalScore.score !== -1.0)
     {
-        scoreEle.innerText = "Score: " + finalScore.score;
+        scoreEle.innerText = finalScore.score + "/10";
         commentEle.innerText = finalScore.comment;
 
         const gpa = convertToGPA(finalScore.score);
-        gradeEle.innerText = "Grade: " + gpa[0];
-        gpaEle.innerText = "GPA: " + gpa[1].toFixed(1);
+        gradeEle.innerText = "ABC: " + gpa[0];
+        gpaEle.innerText = gpa[1].toFixed(1) + "/4.0";
     }
     else
     {
