@@ -29,13 +29,13 @@ input::selection {
 }
 
 button,
-.signup-button, .signup-button-trigger {
-  padding: 0.25rem 1.25rem;
+.calculate-button, .calculate-button-trigger {
+  padding: 0.25em 1.25em;
   border: 0;
   outline: 0;
   background: rgb(3, 169, 244);
   color: rgba(255, 255, 255, 0.85);
-  font-size: 2rem;
+  font-size: 2em;
   line-height: 3.6rem;
   letter-spacing: 0.0625rem;
   box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.25);
@@ -68,8 +68,8 @@ input:focus ~ .tip {
   opacity: 1;
 }
 
-input:focus ~ .signup-button,
-button:focus ~ .signup-button {
+input:focus ~ .calculate-button,
+button:focus ~ .calculate-button {
   opacity: 0;
 }
 
@@ -100,8 +100,8 @@ input:focus + label .nav-dot:before {
   transition: opacity 0.25s 0.5s;
 }
 
-.signup-button,
-.signup-button-trigger {
+.calculate-button,
+.calculate-button-trigger {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -113,8 +113,15 @@ input:focus + label .nav-dot:before {
   transition: opacity 0.4s 0.3s;
   z-index: 10;
 }
+@media screen and (max-width: 450px) {
+  .calculate-button,
+  .calculate-button-trigger {
+    line-height: 1.5em;
+    font-size: 1.5em;
+  }
+}
 
-.signup-button-trigger {
+.calculate-button-trigger {
   opacity: 0;
   pointer-events: auto;
 }
@@ -134,6 +141,11 @@ input:focus + label .nav-dot:before {
   letter-spacing: 0.125rem;
   pointer-events: none;
   transition: all 0.4s cubic-bezier(0.4, 0.25, 0.8, 0.3) 0.05s;
+}
+@media screen and (max-width: 450px) {
+  .label-text {
+    font-size: 1rem;
+  }
 }
 
 .nav-dot {
@@ -235,14 +247,14 @@ form {
 }
 
 .result-container h1 {
-  font-size: 3rem;
+  font-size: 3em;
   font-weight: 800;
   margin-bottom: 10px;
   color: #111E25;
 }
 
 #score, #grade, #gpa {
-  font-size: 3rem;
+  font-size: 3em;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -260,6 +272,11 @@ form {
     align-items: space-around;
     justify-content: center;
     gap: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  #result {
+    font-size: 0.8rem;
   }
 }
 .fa {
@@ -281,7 +298,7 @@ form {
   outline: 0;
   background: rgb(3, 169, 244);
   color: rgba(255, 255, 255, 0.85);
-  font-size: 2rem;
+  font-size: 2em;
   letter-spacing: 0.0625rem;
   text-align: center;
   box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.25);
